@@ -1,4 +1,5 @@
 package com.zipcodewilmington.froilansfarm.interfaces;
 
-public interface Aircraft {
+public interface Aircraft<Pilot> {
+    void fly();
 }

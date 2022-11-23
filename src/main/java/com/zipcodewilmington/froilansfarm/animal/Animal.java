@@ -1,4 +1,7 @@
 package com.zipcodewilmington.froilansfarm.animal;
 
-public class Animal {
+import com.zipcodewilmington.froilansfarm.interfaces.Eater;
+import com.zipcodewilmington.froilansfarm.interfaces.Produce;
+
+public abstract class Animal implements Eater <Produce> {
 }
