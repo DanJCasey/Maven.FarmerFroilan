@@ -1,11 +1,8 @@
 package com.zipcodewilmington.froilansfarm.farmVehicle;
 
-import com.zipcodewilmington.froilansfarm.animal.Pilot;
 import com.zipcodewilmington.froilansfarm.crop.Crop;
-import com.zipcodewilmington.froilansfarm.crop.TomatoPlant;
-import com.zipcodewilmington.froilansfarm.field.CornRow;
+import com.zipcodewilmington.froilansfarm.field.CropRow;
 import com.zipcodewilmington.froilansfarm.interfaces.Aircraft;
-import com.zipcodewilmington.froilansfarm.interfaces.Rider;
 
 public class CropDuster extends FarmVehicle implements Aircraft {
     boolean toBeFertilized;
@@ -32,23 +29,15 @@ public class CropDuster extends FarmVehicle implements Aircraft {
         return this.numOfCropFertilize;
     }
 
-//    public boolean needsToBeHarvestedCorn(CornRow cornRow) {
-//        for (Crop crop : cornRow.getList()) {
-//            if (crop.is_hasBeenHarvest() == false) {
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
-//
-//    public boolean needsToBeHarvestedTomato(TomatoRow tomatoRow) {
-//        for (Crop crop : tomatoRow.getList()) {
-//            if (crop.is_hasBeenHarvest() == false) {
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
+    public boolean needsToBeFertilized(CropRow cr) {
+        for (Object cropRow : cr.getLstCrops()) {
+            if (cropRow.equals(true)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     public void fly() {
 

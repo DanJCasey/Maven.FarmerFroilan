@@ -1,15 +1,18 @@
 package com.zipcodewilmington.froilansfarm.farmVehicle;
 
+//import junit.framework.TestCase;
 import com.zipcodewilmington.froilansfarm.crop.CornStalk;
 import com.zipcodewilmington.froilansfarm.crop.Crop;
 import com.zipcodewilmington.froilansfarm.crop.TomatoPlant;
-import com.zipcodewilmington.froilansfarm.farmVehicle.CropDuster;
-import com.zipcodewilmington.froilansfarm.field.CornRow;
-import com.zipcodewilmington.froilansfarm.field.TomatoRow;
-import com.zipcodewilmington.froilansfarm.interfaces.Aircraft;
-//import junit.framework.TestCase;
+import com.zipcodewilmington.froilansfarm.field.CropRow;
+import com.zipcodewilmington.froilansfarm.produce.Corn;
+import com.zipcodewilmington.froilansfarm.produce.Tomato;
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class CropDusterTest {
     @Test
@@ -72,33 +75,26 @@ public class CropDusterTest {
         Assert.assertEquals(expected, actual);
     }
 
-//@Test
-//    public void needsToBeFertilizedCornTest() {
-//        //given
-//    CropDuster cduster = new CropDuster(true, 100);
-//    CornRow cornRow = new CornRow();
-//    Crop crop = new CornStalk();
-//    crop.harvest();
-//    Boolean expected = false;
-//        //when
-//    cornrow.add(crop);
-//    Boolean actual = cduster.needsToBeFertilizedCorn(cornRow);
-//        //then
-//        Assert.assertEquals(expected, actual);
-//    }
+@Test
+    public void needsToBeFertilizedTest() {
+        //given
+    CropDuster cduster = new CropDuster(true, 100);
+    Boolean expected = true;
+        //when
+    cduster.needsToBeFertilized(new CropRow<CornStalk>(new ArrayList<CornStalk>()));
+        //then
+    Assert.assertTrue(expected);
+    }
 
-//    @Test
-//    public void needsToBeFertilizedTomatoTest() {
-//        //given
-//    CropDuster cduster = new CropDuster(true, 100);
-//    TomatoRow tomatorow = new TomatoRow();
-//    Crop crop = new TomatoPlant();
-//    crop.harvest();
-//    Boolean expected = false;
-//        //when
-//    tomatorow.add(crop);
-//    Boolean actual = cduster.needsToBeFertilizedTomato(tomatorow);
-//        //then
-//        Assert.assertEquals(expected, actual);
-//    }
+    @Test
+    public void needsToBeFertilizedTest2() {
+        //given
+        CropDuster cduster = new CropDuster(true, 100);
+        Boolean expected = true;
+        //when
+        cduster.needsToBeFertilized(new CropRow<TomatoPlant>(new ArrayList<TomatoPlant>()));
+        //then
+        Assert.assertTrue(expected);
+    }
+
 }

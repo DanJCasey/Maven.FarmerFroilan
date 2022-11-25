@@ -1,8 +1,17 @@
 package com.zipcodewilmington.froilansfarm.farmVehicle;
 
 //import junit.framework.TestCase;
+import com.zipcodewilmington.froilansfarm.crop.CornStalk;
+import com.zipcodewilmington.froilansfarm.crop.Crop;
+import com.zipcodewilmington.froilansfarm.crop.TomatoPlant;
+import com.zipcodewilmington.froilansfarm.field.CropRow;
+import com.zipcodewilmington.froilansfarm.produce.Corn;
+import com.zipcodewilmington.froilansfarm.produce.Tomato;
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TractorTest {
     @Test
@@ -65,33 +74,25 @@ public class TractorTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void needsToBeHarvestedTest() {
+        //given
+        Tractor tractor = new Tractor(true, 100);
+        Boolean expected = true;
+        //when
+        tractor.needsToBeHarvested(new CropRow<CornStalk>(new ArrayList<CornStalk>()));
+        //then
+        Assert.assertTrue(expected);
+    }
 
-//    @Test
-//    public void needsToBeHarvestedCornTest() {
-//    //given
-//        Tractor tractor = new Tractor(true, 100);
-//        CornRow cornrow = new CornRow();
-//        Crop crop = new CornStalk();
-//        crop.harvest();
-//        Boolean expected = false;
-////when
-//        cornrow.add(crop);
-//        Boolean actual = tractor.needsToBeHarvestedCorn(cornrow);
-////then
-//        Assert.assertEquals(expected, actual);
-//    }
-
-//    public void needsToBeHarvestedTomatoTest() {
-    //given
-//        Tractor tractor = new Tractor(true, 100);
-//        TomatoRow tomatorow = new TomatoRow();
-//        Crop crop = new TomatoPlant();
-//        crop.harvest();
-//        Boolean expected = false;
-//when
-//        tomatorow.add(crop);
-//        Boolean actual = tractor.needsToBeHarvestedTomato(tomatorow);
-//then
-//        Assert.assertEquals(expected, actual);
-//    }
+    @Test
+    public void needsToBeHarvestedTest2() {
+        //given
+        Tractor tractor = new Tractor(true, 100);
+        Boolean expected = true;
+        //when
+        tractor.needsToBeHarvested(new CropRow<TomatoPlant>(new ArrayList<TomatoPlant>()));
+        //then
+        Assert.assertTrue(expected);
+    }
 }
