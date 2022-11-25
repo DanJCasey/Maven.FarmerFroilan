@@ -1,4 +1,7 @@
 package com.zipcodewilmington.froilansfarm.field;
 
-public class Field {
+import com.zipcodewilmington.froilansfarm.interfaces.Storage;
+
+public class Field implements Storage<CropRow> {
+
 }
