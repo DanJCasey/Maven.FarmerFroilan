@@ -1,5 +1,4 @@
 package com.zipcodewilmington.froilansfarm.farmVehicle;
-
 import com.zipcodewilmington.froilansfarm.crop.Crop;
 import com.zipcodewilmington.froilansfarm.field.CropRow;
 import com.zipcodewilmington.froilansfarm.interfaces.Aircraft;

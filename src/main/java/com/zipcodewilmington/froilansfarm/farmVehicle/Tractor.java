@@ -1,5 +1,4 @@
 package com.zipcodewilmington.froilansfarm.farmVehicle;
-
 import com.zipcodewilmington.froilansfarm.field.CropRow;
 
 public class Tractor extends FarmVehicle {
@@ -36,6 +35,7 @@ public class Tractor extends FarmVehicle {
         }
         return false;
     }
+
     public void ride() {
 
     }
