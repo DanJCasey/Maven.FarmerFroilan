@@ -81,7 +81,7 @@ public class CropDusterTest {
     CropDuster cduster = new CropDuster(true, 100);
     Boolean expected = true;
         //when
-    cduster.needsToBeFertilized(new CropRow<CornStalk>(new ArrayList<CornStalk>()));
+    cduster.needsToBeFertilized(new CropRow<>(new ArrayList<CornStalk>()));
         //then
     Assert.assertTrue(expected);
     }
@@ -92,9 +92,20 @@ public class CropDusterTest {
         CropDuster cduster = new CropDuster(true, 100);
         Boolean expected = true;
         //when
-        cduster.needsToBeFertilized(new CropRow<TomatoPlant>(new ArrayList<TomatoPlant>()));
+        cduster.needsToBeFertilized(new CropRow<>(new ArrayList<TomatoPlant>()));
         //then
         Assert.assertTrue(expected);
+    }
+
+    @Test
+    public void toFlyTest() {
+        //given
+        CropDuster cduster = new CropDuster(true, 100);
+        Boolean expected = true;
+        //when
+        Boolean actual = cduster.fly();
+        //then
+        Assert.assertEquals(expected, actual);
     }
 
 }

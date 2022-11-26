@@ -29,14 +29,11 @@ public class Tractor extends FarmVehicle {
 
     public boolean needsToBeHarvested(CropRow cr) {
         for (Object croprow : cr.getLstCrops()) {
-            if (croprow.equals(true)) {
+            if (croprow.equals(false)) {
                 return true;
             }
         }
         return false;
     }
 
-    public void ride() {
-
-    }
 }

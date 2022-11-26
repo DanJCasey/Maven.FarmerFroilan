@@ -10,8 +10,6 @@ public class FarmVehicleTest {
         boolean expectedHasBeenOperated = true;
         //when
         FarmVehicle farmVehicle = new FarmVehicle() {
-            public void ride() {
-           }
         };
         //given
         Assert.assertEquals(expectedHasBeenOperated,farmVehicle.getOperate());
@@ -23,8 +21,6 @@ public class FarmVehicleTest {
         boolean expectedHasBeenOperated = true;
         //when
         FarmVehicle farmVehicle = new FarmVehicle() {
-            public void ride() {
-            }
         };
         farmVehicle.setOperate(true);
         //then
@@ -37,8 +33,6 @@ public class FarmVehicleTest {
         boolean expectedHasBeenOperated = false;
         //when
         FarmVehicle farmVehicle = new FarmVehicle() {
-            public void ride() {
-            }
         };
         farmVehicle.setOperate(false);
         //then
