@@ -1,14 +1,14 @@
 package com.zipcodewilmington.froilansfarm.produce;
-
-import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.Produce;
 
-public class Corn implements Edible, Produce {
+public class Corn implements Produce {
+    public Corn() {
+    }
     public boolean beenEaten() {
-        return false;
+        return true;
     }
 
     public boolean hasBeenHarvest() {
-        return false;
+        return true;
     }
 }

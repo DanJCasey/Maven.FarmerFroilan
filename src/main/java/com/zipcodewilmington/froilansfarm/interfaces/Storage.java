@@ -5,6 +5,6 @@ import com.zipcodewilmington.froilansfarm.shelter.Shelter;
 import java.util.ArrayList;
 import java.util.List;
 
-public interface Storage<T> extends List<T> {
+public interface Storage<T> {
     //List<T> animalStorage = new ArrayList<T>();
 }

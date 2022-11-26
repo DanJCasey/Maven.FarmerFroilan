@@ -19,7 +19,6 @@ public class TomatoPlantTest extends TestCase {
         List<Tomato> actual=objTomatoPLant.getTomatoes();
         //Then
         Assert.assertEquals(expected,actual);
-
     }
     public void testSetTomatoes() {
         //Given
