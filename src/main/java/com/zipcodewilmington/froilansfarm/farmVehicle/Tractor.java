@@ -1,4 +1,9 @@
 package com.zipcodewilmington.froilansfarm.farmVehicle;
 
-public class Tractor {
+import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
+
+public class Tractor implements Rideable {
+    public void ride() {
+
+    }
 }

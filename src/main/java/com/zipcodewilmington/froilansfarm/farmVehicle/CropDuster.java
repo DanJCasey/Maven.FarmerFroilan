@@ -1,4 +1,9 @@
 package com.zipcodewilmington.froilansfarm.farmVehicle;
 
-public class CropDuster {
+import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
+
+public class CropDuster implements Rideable {
+    public void ride() {
+
+    }
 }
