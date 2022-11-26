@@ -17,7 +17,7 @@ public class CropRowTest extends TestCase {
         //Given
         List<Crop> lstCropExpected=new ArrayList<Crop>();
         lstCropExpected.add(new TomatoPlant(new ArrayList<Tomato>()));
-        lstCropExpected.add(new CornStalk(new ArrayList<Corn>()));
+        lstCropExpected.add(new TomatoPlant(new ArrayList<Tomato>()));
         CropRow objCropRow=new CropRow(lstCropExpected);
         //When
         List<Crop> lstCropActual=  objCropRow.getLstCrops();
