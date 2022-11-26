@@ -80,7 +80,7 @@ public class TractorTest {
         Tractor tractor = new Tractor(true, 100);
         Boolean expected = true;
         //when
-        tractor.needsToBeHarvested(new CropRow<CornStalk>(new ArrayList<CornStalk>()));
+        tractor.needsToBeHarvested(new CropRow<>(new ArrayList<CornStalk>()));
         //then
         Assert.assertTrue(expected);
     }
@@ -91,7 +91,7 @@ public class TractorTest {
         Tractor tractor = new Tractor(true, 100);
         Boolean expected = true;
         //when
-        tractor.needsToBeHarvested(new CropRow<TomatoPlant>(new ArrayList<TomatoPlant>()));
+        tractor.needsToBeHarvested(new CropRow<>(new ArrayList<TomatoPlant>()));
         //then
         Assert.assertTrue(expected);
     }

@@ -1,5 +1,4 @@
 package com.zipcodewilmington.froilansfarm.farmVehicle;
-import com.zipcodewilmington.froilansfarm.crop.Crop;
 import com.zipcodewilmington.froilansfarm.field.CropRow;
 import com.zipcodewilmington.froilansfarm.interfaces.Aircraft;
 
@@ -30,19 +29,16 @@ public class CropDuster extends FarmVehicle implements Aircraft {
 
     public boolean needsToBeFertilized(CropRow cr) {
         for (Object cropRow : cr.getLstCrops()) {
-            if (cropRow.equals(true)) {
+            if (cropRow.equals(false)) {
                 return true;
             }
         }
         return false;
     }
 
-
-    public void fly() {
-
+@Override
+    public boolean fly() {
+        return true;
     }
 
-    public void ride() {
-
-    }
 }
