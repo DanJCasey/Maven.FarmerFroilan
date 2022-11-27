@@ -5,5 +5,6 @@ import org.junit.Test;
 public class FridayTest {
     @Test
     public void name() {
+
     }
 }
