@@ -2,11 +2,17 @@ package com.zipcodewilmington.froilansfarm.animal;
 
 import com.zipcodewilmington.froilansfarm.interfaces.Eater;
 import com.zipcodewilmington.froilansfarm.interfaces.Produce;
+import com.zipcodewilmington.froilansfarm.produce.Corn;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Animal implements Eater<Produce> {
 
     String name;
     int age;
+
+    public static List<Produce> stomach = new ArrayList<>();
 
     public Animal(String name, int age) {
         this.name = name;
@@ -34,5 +40,7 @@ public abstract class Animal implements Eater<Produce> {
         this.age = age;
     }
 
-    public void eat() {}
+    public void eat(Produce food) {stomach.add(food);}
+
+    public static boolean fed(){return !stomach.isEmpty();}
 }
