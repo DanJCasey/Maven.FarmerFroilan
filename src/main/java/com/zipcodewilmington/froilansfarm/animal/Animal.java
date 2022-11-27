@@ -13,7 +13,10 @@ public abstract class Animal implements Eater<Produce> {
         this.age = age;
     }
 
-    public Animal() {}
+    public Animal() {
+        this.name = "";
+        this.age = 0;
+    }
 
     public String getName() {
         return name;
@@ -30,4 +33,6 @@ public abstract class Animal implements Eater<Produce> {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public void eat() {}
 }
