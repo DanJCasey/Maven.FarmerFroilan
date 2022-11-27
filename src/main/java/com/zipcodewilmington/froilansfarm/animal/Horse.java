@@ -10,11 +10,10 @@ public class Horse extends Animal implements Eater<Produce>, Rideable, NoiseMake
         super(name, age);
     }
 
-    public void eat() {}
+    public void eat(Produce food) {stomach.add(food);}
 
-    public static boolean fed(){
-        return false;
-    }
+    public static boolean fed(){return !stomach.isEmpty();}
+
 
     public static String makeNoise() {
         return "Neigh!";

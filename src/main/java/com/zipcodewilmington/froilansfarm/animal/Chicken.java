@@ -10,7 +10,9 @@ public class Chicken extends Animal implements Eater<Produce>, NoiseMaker {
     public Chicken(String name, int age) {
         super(name, age);
     }
-    public void eat() {}
-    public static boolean fed(){return false;}
+    public void eat(Produce food) {stomach.add(food);}
+
+    public static boolean fed(){return !stomach.isEmpty();}
+
     public static String makeNoise() {return "Cluck!";}
 }
