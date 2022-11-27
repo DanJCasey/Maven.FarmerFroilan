@@ -1,18 +1,20 @@
 package com.zipcodewilmington.froilansfarm.schedule;
 
-import com.zipcodewilmington.froilansfarm.animal.Animal;
 import com.zipcodewilmington.froilansfarm.animal.Farmer;
 import com.zipcodewilmington.froilansfarm.animal.Pilot;
-import com.zipcodewilmington.froilansfarm.interfaces.Produce;
+import com.zipcodewilmington.froilansfarm.farmVehicle.CropDuster;
 import com.zipcodewilmington.froilansfarm.produce.Corn;
 import com.zipcodewilmington.froilansfarm.produce.Egg;
 import com.zipcodewilmington.froilansfarm.produce.Tomato;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
-
 public class WednesdayTest {
+    @Test
+    public void name() {
+
+    }
+
     @Test
     public void froilanBreakfastTest() {
         Farmer Froilan = new Farmer("Froilan", 25);
@@ -45,5 +47,16 @@ public class WednesdayTest {
         Froilanda.eat(new Egg());
 
         Assert.assertTrue(Froilanda.fed());
+    }
+
+    @Test
+    public void toFlyTest() {
+        //given
+        CropDuster cduster = new CropDuster(true, 120);
+        Boolean expected = true;
+        //when
+        Boolean actual = cduster.fly();
+        //then
+        Assert.assertEquals(expected, actual);
     }
 }

@@ -98,9 +98,9 @@ public class CropDusterTest {
     }
 
     @Test
-    public void toFlyTest() {
+    public void toFlyTest1() {
         //given
-        CropDuster cduster = new CropDuster(true, 100);
+        CropDuster cduster = new CropDuster(true, 500);
         Boolean expected = true;
         //when
         Boolean actual = cduster.fly();

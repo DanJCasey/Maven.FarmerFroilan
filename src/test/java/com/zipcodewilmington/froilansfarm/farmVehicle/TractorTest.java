@@ -62,17 +62,17 @@ public class TractorTest {
         Assert.assertEquals(expected, actual);
     }
 
-    @Test
-    public void harvestTest () {
-        //given
-        Tractor tractor = new Tractor(false, 0);
-        Boolean expected = true;
-        //when
-        tractor.setToBeHarvested(true);
-        Boolean actual = tractor.getToBeHarvested();
-        //then
-        Assert.assertEquals(expected, actual);
-    }
+//    @Test
+//    public void harvestTest () {
+//        //given
+//        Tractor tractor = new Tractor(false, 0);
+//        Boolean expected = true;
+//        //when
+//        tractor.setToBeHarvested(true);
+//        Boolean actual = tractor.getToBeHarvested();
+//        //then
+//        Assert.assertEquals(expected, actual);
+//    }
 
     @Test
     public void needsToBeHarvestedTest() {
