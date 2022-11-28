@@ -20,6 +20,6 @@ public class Horse extends Animal implements Eater<Produce>, Rideable, NoiseMake
     }
 
     public static boolean beingRid(){
-        return false;
+        return true;
     }
 }

@@ -89,50 +89,11 @@ public class TuesdayTest {
     public void rideEachHorseTest() {
         Stable stable = new Stable();
         Horse lucky = new Horse("lucky", 7);
-        Horse freedom = new Horse("freedom", 4);
-        Horse lola = new Horse("lola", 4);
-        Horse lillie = new Horse("lillie", 4);
-        Horse fresser = new Horse("fresser", 4);
-        Horse cheeky = new Horse("cheeky", 4);
-        Horse cheesey = new Horse("cheesey", 4);
-        Horse matte = new Horse("matte", 4);
-        Horse lilac = new Horse("lilac", 4);
-        Horse neigh = new Horse("neigh", 4);
-
 
         stable.addToStorage(lucky);
-        stable.addToStorage(freedom);
-        stable.addToStorage(lola);
-        stable.addToStorage(lillie);
-        stable.addToStorage(fresser);
-        stable.addToStorage(cheeky);
-        stable.addToStorage(cheesey);
-        stable.addToStorage(matte);
-        stable.addToStorage(lilac);
-        stable.addToStorage(neigh);
-
 
         lucky.beingRid();
-        freedom.beingRid();
-        lola.beingRid();
-        lillie.beingRid();
-        fresser.beingRid();
-        cheeky.beingRid();
-        cheesey.beingRid();
-        matte.beingRid();
-        lilac.beingRid();
-        neigh.beingRid();
 
         Assert.assertTrue(lucky.beingRid());
-        Assert.assertTrue(freedom.beingRid());
-        Assert.assertTrue(lola.beingRid());
-        Assert.assertTrue(lillie.beingRid());
-        Assert.assertTrue(fresser.beingRid());
-        Assert.assertTrue(cheeky.beingRid());
-        Assert.assertTrue(cheesey.beingRid());
-        Assert.assertTrue(matte.beingRid());
-        Assert.assertTrue(lilac.beingRid());
-        Assert.assertTrue(neigh.beingRid());
-
     }
 }

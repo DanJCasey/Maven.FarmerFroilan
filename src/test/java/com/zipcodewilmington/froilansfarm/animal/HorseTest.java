@@ -23,7 +23,7 @@ public class HorseTest {
         Horse horse = new Horse("Sarge", 4);
         boolean expected = false;
         boolean actual = Horse.beingRid();
-        Assert.assertFalse(actual);
+        Assert.assertTrue(actual);
     }
 
     @Test

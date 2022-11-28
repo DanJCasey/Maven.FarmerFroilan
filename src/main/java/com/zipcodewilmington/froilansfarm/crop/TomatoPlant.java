@@ -1,7 +1,6 @@
 package com.zipcodewilmington.froilansfarm.crop;
 
 import com.zipcodewilmington.froilansfarm.produce.Tomato;
-import sun.util.resources.cldr.ha.CalendarData_ha_Latn_GH;
 
 import java.util.ArrayList;
 import java.util.List;
